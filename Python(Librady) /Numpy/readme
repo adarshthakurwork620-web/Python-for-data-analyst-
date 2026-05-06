@@ -1,1 +1,91 @@
 
+# 🔢 NumPy — Data Analytics Notes
+
+> ⚡ NumPy = Fast arrays + Math + The backbone of every data analytics library.
+
+---
+
+🚀 Setup
+```bash
+pip install numpy
+import numpy as np
+```
+
+---
+
+📐 Arrays
+```python
+np.array([1, 2, 3])            # 1D
+np.array([[1,2],[3,4]])        # 2D
+np.zeros((3,3))                # All zeros
+np.arange(0, 10, 2)           # [0,2,4,6,8]
+np.random.rand(3, 3)          # Random matrix
+```
+
+---
+
+⚙️ Operations
+```python
+a = np.array([10, 20, 30])
+a + 5   # [15, 25, 35]
+a * 2   # [20, 40, 60]
+a ** 2  # [100, 400, 900]
+```
+
+---
+
+🔍 Indexing
+```python
+arr = np.array([10, 20, 30, 40, 50])
+arr[0]        # 10
+arr[1:4]      # [20, 30, 40]
+arr[arr > 25] # [30, 40, 50]  ← Boolean indexing 🔥
+```
+
+---
+
+📊 Statistics (Most Used in Analytics)
+```python
+data = np.array([5, 10, 15, 20, 25])
+
+np.mean(data)    # 15.0
+np.median(data)  # 15.0
+np.std(data)     # 7.07
+np.min(data)     # 5
+np.max(data)     # 25
+np.sum(data)     # 75
+```
+
+---
+
+🛠️ Real Analytics Tricks
+
+**Normalize data:**
+```python
+norm = (data - data.min()) / (data.max() - data.min())
+```
+
+**Remove NaN:**
+```python
+clean = data[~np.isnan(data)]
+```
+
+**Find outliers:**
+```python
+filtered = data[np.abs(data - np.mean(data)) < 2 * np.std(data)]
+```
+
+---
+
+## 🗺️ Learning Path
+
+- [x] Arrays & shapes
+- [x] Indexing & slicing
+- [x] Math & statistics
+- [ ] Linear algebra
+- [ ] Pandas integration
+- [ ] Matplotlib plotting
+
+---
+
+📖 [Docs](https://numpy.org/doc) 
